@@ -23,12 +23,16 @@ class TwoMethods:
         print(self.above_below_dict)
 
     def rotate_string(self):
-        net_rotation = self.rotation % len(self.string)
-        self.rotated_string = (2 * self.string)[len(self.string)-net_rotation: 2*len(self.string)-net_rotation]
+        if self.string == '':
+            self.rotated_string = ''
+        else:
+            net_rotation = self.rotation % len(self.string)
+            self.rotated_string = (2 * self.string)[len(self.string)-net_rotation: 2*len(self.string)-net_rotation]
         print(self.rotated_string)
 
 
 if __name__ == '__main__':
+    # Test case:
     num_list = [1, 5, 2, 1, 10]
     comparison_value = 6
     string_to_rotate = 'MyString'
